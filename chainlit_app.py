@@ -4,10 +4,11 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from langchain_core.messages import HumanMessage, AIMessage
-from rag import make_react_agent_graph
+from rag import create_vector_search_tool
 import tiktoken
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyMuPDFLoader
+from langgraph.prebuilt import create_react_agent
 
 # load_dotenv()
 
@@ -58,7 +59,11 @@ async def start_chat():
 
     # Create the ReAct agent graph
     # The search_kwargs for the vector store can be customized if needed
-    agent_graph = make_react_agent_graph(model=model, vector_store=vector_store, search_kwargs={"k": 3})
+    agent_graph = create_react_agent(
+        model=model,
+        tools=[create_vector_search_tool(vector_store, {"k": 5})]#,
+        #checkpointer=checkpointer
+    )
     
     cl.user_session.set("agent_graph", agent_graph)
 

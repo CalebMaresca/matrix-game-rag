@@ -80,26 +80,3 @@ def create_vector_search_tool(vector_store: VectorStore, search_kwargs: dict) ->
     return [doc.page_content for doc in retrieved_docs]
   return vector_search_tool
 
-
-def make_react_agent_graph(model: BaseChatModel, vector_store: VectorStore, search_kwargs: dict = {"k": 5}):
-  """
-  Creates a StateGraph for a RAG agent that uses the ReAct framework.
-  The agent can formulate its own queries to the vector database.
-  """
-  search_tool = create_vector_search_tool(vector_store, search_kwargs)
-  
-  # A checkpointer is highly recommended for agents to allow them to save state
-  # across multiple steps of thought and action.
-  # checkpointer = InMemorySaver()
-
-  # The prebuilt create_react_agent handles the agent logic and graph compilation.
-  # It uses a default ReAct prompt unless a custom one is provided.
-  # The agent's state revolves around messages.
-  # Input to this agent_graph.invoke should be like: {"messages": [HumanMessage(content="your question")]}
-  agent_graph = create_react_agent(
-      model=model,
-      tools=[search_tool]#,
-      #checkpointer=checkpointer
-  )
-  return agent_graph
-
