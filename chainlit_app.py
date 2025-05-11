@@ -1,5 +1,6 @@
 import chainlit as cl
 from dotenv import load_dotenv
+from datetime import datetime
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
@@ -9,14 +10,30 @@ import tiktoken
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyMuPDFLoader
 from langgraph.prebuilt import create_react_agent
+from wikipedia_tool import WikipediaToolkit
+from langchain.prompts import ChatPromptTemplate
+from langchain_core.prompts import MessagesPlaceholder
 
 # load_dotenv()
+
+SYSTEM_PROMPT = '''
+You are a helpful assistant that can aid users with tasks related to matrix games (the type of wargame).
+
+When you require information regarding recent or historical events, do not rely only on your own knowledge, but use the Wikipedia tool.
+
+Today's date is {current_date}.
+'''
+
+prompt = ChatPromptTemplate.from_messages([
+    ("system", SYSTEM_PROMPT.format(current_date=datetime.now().strftime("%B %d, %Y"))),
+    MessagesPlaceholder(variable_name="messages"),
+])
 
 
 @cl.on_chat_start
 async def start_chat():
     settings = { # TODO: These settings might need to be passed to the Langchain model differently
-        "model": "gpt-4o-mini",
+        "model": "gpt-4.1-mini",
         "temperature": 0.5,
         "max_tokens": 2000,
         "frequency_penalty": 0,
@@ -57,12 +74,15 @@ async def start_chat():
     # You might want to add some documents here if you have any, e.g.:
     # vector_store.add_texts(["Some initial context for the agent"])
 
+    # Initialize Wikipedia toolkit
+    wikipedia_toolkit = WikipediaToolkit()
+    wikipedia_tools = wikipedia_toolkit.get_tools()
+
     # Create the ReAct agent graph
-    # The search_kwargs for the vector store can be customized if needed
     agent_graph = create_react_agent(
         model=model,
-        tools=[create_vector_search_tool(vector_store, {"k": 5})]#,
-        #checkpointer=checkpointer
+        prompt=prompt,
+        tools=[create_vector_search_tool(vector_store, {"k": 5})] + wikipedia_tools
     )
     
     cl.user_session.set("agent_graph", agent_graph)
@@ -76,54 +96,21 @@ async def main(message: cl.Message):
         await cl.Message(content="The agent is not initialized. Please restart the chat.").send()
         return
 
-    conversation_history = cl.chat_context.to_openai()
-
+    # Convert OpenAI format messages to LangChain format
+    chat_history = cl.chat_context.to_openai()
+    
     msg = cl.Message(content="")
     # msg.content will be built by streaming tokens.
     # stream_token will call send() on the first token.
     async for token, metadata in agent_graph.astream(
-                {'messages': conversation_history},
+                {'messages': chat_history},
                 stream_mode="messages"
             ):
                 
                 if metadata['langgraph_node'] == 'agent':
                     await msg.stream_token(token.content)
-
-    # try:
-    #     # Use stream_mode="messages" to get LLM tokens as MessageChunk objects
-    #     async for chunk in agent_graph.astream(
-    #         agent_input, {"stream_mode": "messages"}
-    #     ):
-    #         # chunk is expected to be a MessageChunk (e.g., AIMessageChunk)
-    #         if hasattr(chunk, 'content'):
-    #             token = chunk.content
-    #             if token:  # Ensure there's content in the chunk
-    #                 # msg.stream_token will handle sending the message shell on the first call
-    #                 await msg.stream_token(token)
-    #         # else:
-    #             # Handle cases where the chunk might not be a MessageChunk as expected,
-    #             # or if other types of events are streamed in this mode (though less likely for "messages" mode).
-    #             # print(f"Received chunk without content: {chunk}")
-    # except Exception as e:
-    #     print(f"Error during agent stream: {e}")
-    #     await cl.Message(content=f"An error occurred: {str(e)}").send()
-    #     return
-
-    # After the loop, if tokens were streamed, the message content is populated.
-    # A final update might be necessary if other properties of msg need to be set,
-    # or to ensure the stream is properly closed from Chainlit's perspective.
-    if msg.streaming: # msg.streaming is True if stream_token was called
+                    
+    if msg.streaming:
         await msg.update()
-    elif not msg.content: # If no tokens were streamed and message is still empty
-        # This case might occur if the agent produces no response or an error happened before streaming
-        # (though the try-except should catch errors in astream itself).
-        # Send a default message or handle as an error.
-        # For now, if no content, we don't send an empty message unless explicitly handled.
-        # If msg.send() was never called (because no tokens came), we might need to send something.
-        # However, if there was genuinely no response, sending nothing might be intended.
-        # Let's ensure an empty message isn't sent if no tokens were ever produced.
-        # If an error occurred, it's handled by the except block.
-        # If the agent genuinely returns no content, this will result in no message being sent
-        # beyond the initial empty shell (if it were sent prior to token checks).
-        # Since msg.send() is implicitly called by the first stream_token, if no tokens, no send.
+    elif not msg.content:
         pass
