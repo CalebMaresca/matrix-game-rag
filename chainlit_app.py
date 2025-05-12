@@ -6,6 +6,8 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from langchain_core.messages import HumanMessage, AIMessage
 from rag import create_vector_search_tool
+from game_designer_tool import GameDesignerTool
+from prompts import RULES_SUMMARY
 import tiktoken
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyMuPDFLoader
@@ -22,10 +24,13 @@ You are a helpful assistant that can aid users with tasks related to matrix game
 When you require information regarding recent or historical events, do not rely only on your own knowledge, but use the Wikipedia tool.
 
 Today's date is {current_date}.
+
+Below is some basic information about matrix games. For more information, use the vector search tool.  
+{rules_summary}
 '''
 
 prompt = ChatPromptTemplate.from_messages([
-    ("system", SYSTEM_PROMPT.format(current_date=datetime.now().strftime("%B %d, %Y"))),
+    ("system", SYSTEM_PROMPT.format(current_date=datetime.now().strftime("%B %d, %Y"), rules_summary=RULES_SUMMARY)),
     MessagesPlaceholder(variable_name="messages"),
 ])
 
@@ -82,7 +87,7 @@ async def start_chat():
     agent_graph = create_react_agent(
         model=model,
         prompt=prompt,
-        tools=[create_vector_search_tool(vector_store, {"k": 5})] + wikipedia_tools
+        tools=[create_vector_search_tool(vector_store, {"k": 5})] + wikipedia_tools + [GameDesignerTool()]
     )
     
     cl.user_session.set("agent_graph", agent_graph)
