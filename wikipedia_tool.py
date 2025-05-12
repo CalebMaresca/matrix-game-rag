@@ -1,10 +1,7 @@
 from langchain_core.tools import BaseTool
 from langchain_core.callbacks import CallbackManagerForToolRun
 from pydantic import BaseModel, Field
-from typing import Optional, Type
-
-import logging
-from typing import Any, Dict, Iterator, List, Optional
+from typing import Optional, Type, Any, Dict, Iterator, List
 
 from langchain_core.documents import Document
 from pydantic import BaseModel, model_validator

@@ -4,7 +4,6 @@ from datetime import datetime
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
-from langchain_core.messages import HumanMessage, AIMessage
 from rag import create_vector_search_tool
 from game_designer_tool import GameDesignerTool
 from prompts import RULES_SUMMARY
