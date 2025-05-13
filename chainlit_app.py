@@ -1,5 +1,4 @@
 import chainlit as cl
-from dotenv import load_dotenv
 from datetime import datetime
 
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -15,8 +14,6 @@ from langgraph.prebuilt import create_react_agent
 from wikipedia_tool import WikipediaToolkit
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.prompts import MessagesPlaceholder
-
-# load_dotenv()
 
 SYSTEM_PROMPT = '''
 You are a helpful assistant that can aid users with tasks related to matrix games (the type of wargame).
