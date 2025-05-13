@@ -9,7 +9,8 @@ from game_designer_tool import GameDesignerTool
 from prompts import RULES_SUMMARY
 import tiktoken
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.document_loaders import PyMuPDFLoader
+# from langchain.document_loaders import PyMuPDFLoader
+from langchain_community.document_loaders import DirectoryLoader
 from langgraph.prebuilt import create_react_agent
 from wikipedia_tool import WikipediaToolkit
 from langchain.prompts import ChatPromptTemplate
@@ -62,7 +63,15 @@ async def start_chat():
         length_function = tiktoken_len,
     )
 
-    loader = PyMuPDFLoader("data/PracticalAdviceOnMatrixGames.pdf")
+    # Pushing PDFs to HF-space is causing issues.
+    # loader = PyMuPDFLoader("rag-data/PracticalAdviceOnMatrixGames.pdf")
+
+    docs = []
+    loader = DirectoryLoader("rag-data/", glob="*.html")
+    docs.extend(loader.load())
+    loader = DirectoryLoader("rag-data/", glob="*.txt")
+    docs.extend(loader.load())
+
     docs = loader.load()
 
     split_chunks = text_splitter.split_documents(docs)
