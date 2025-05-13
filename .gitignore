@@ -3,6 +3,9 @@ docs/
 .cursor/
 .chainlit/
 .files/
+wandb/
+finetuned_arctic_ft/
+checkpoints/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
