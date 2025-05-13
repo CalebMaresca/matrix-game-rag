@@ -1,0 +1,159 @@
+MATRIX GAMES
+
+Contents
+
+What are Matrix Games?
+Where did they come from?
+Game Arguments
+Notes about Arguments
+Resolving Conflicts
+Comments on Resolving Conflicts
+
+Playing Tips
+Secret Arguments
+Big Projects
+Killing Arguments
+Player Roles and the Level of the Game
+Levels of Protection and Hidden Things
+Having Battles and Fighting
+Unifying Purpose
+Ending the Game
+
+
+What are Matrix Games?
+
+Matrix games are different to normal Wargames and Role-Playing games. In a these games you compare lists of statistics and peer at complicated books of rules containing someone else's idea about what things are important, before rolling a dice. It takes a long time and can be very difficult to explain to a newcomer. Instead, in a Matrix Game you simply use words to describe why something should happen, the Umpire decides how likely it is, and you roll a dice. If you can say "This happens, for the following reasons..." you can play a Matrix Game.
+
+
+Where did the come from?
+
+The Matrix Game was created in the USA by Chris Engle, and published in 1992. Chris wanted to create a system by which it was possible for a player to "role-play" anything from a single person to an entire country. Chris felt that previous numbers-ridden game designs essentially missed the point (and anyway were too complicated and boring). What he wanted was a system that could take into account anything the players though was relevant, including intangible elements such as culture, beliefs, and perceptions of themselves. Taking as his starting point the work of the philosopher Emmanuel Kant, Chris began to develop a "matrix" of cue words that would form the framework for his "model". To this he added George Hegel's idea that argument and counter-argument (thesis and antithesis) lead to a synthesis or consensus of ideas. Thus the basic idea of the Matrix Game was formulated. Over the years the actual "matrix" of cue words have been dropped, but the name has stuck. Like all good ideas, the Matrix Game is very simple in concept, but has huge potential in that it can be adapted to fit any game setting.
+
+
+Game Arguments
+
+In a Matrix Game, actions are resolved by a structured sequence of logical "arguments". Each player takes turns to make an argument, with successful arguments advancing the game, and the player's position. The arguments themselves are judged by the Umpire based on inherent likelyhood, historical precedence, personal experience, and his own judgement (and quite often the other player's judgement), and a chance of success arrived at (a 6-sided dice normally being thrown to see if the result was achieved).
+
+Each argument is broken down into:
+
+Something That Happens.
+Three Reasons Why or How.
+
+For Example:
+
+In a Peninsular War campaign, Wellington might argue:
+"I shall fortify the town, and I am able to do this because:
+
+I have a ready source of trained manpower,
+I have an experienced Engineer in command, and
+the British Government has recently sent me the money with which to pay for the work".
+
+In an X-Files Game, Scully might argue:
+"I shall spend some time down on the range, so that my shooting improves, because:
+
+Practice makes perfect!
+FBI HQ has very good facilities so it is easy to arrange.
+The range has well trained instructors who will help me improve".
+
+
+Notes about Arguments
+
+The important thing to remember in a Matrix game is that Arguments can be made about anything that is relevant to the scenario. You can argue about your own personnel or about the enemy, the existence of people, places, things or events, the political leadership back home, the weather, plague, disease, public opinion, and you can even argue for changes in whatever rules you are using. With a bit of imagination, common sense and rational thinking, it is possible to present persuasive arguments as to what should happen in any scenario - from traditional military campaigns to the bizarre world of the X-Files.
+
+When an Argument succeeds it remains in effect until another Argument stops it. This means that if you are Napoleon and succeed in Arguing that you march on Moscow, you will continue to move forward, every turn, until you get there - unless of course someone argues that you don't...
+
+If two Arguments are in direct opposition ("This happens" - "No it doesn't") they represent a Logical Inconsistency since they cannot both be true. If this happens, they must both succeed first as Arguments, then the two sides must roll-off to see who wins between them - so following up a successful argument with one that is merely contradictory puts you at a disadvantage.
+
+
+Resolving Conflicts
+
+If two sides are placed in direct Conflict, they resolve the outcome by making additional arguments. The players both make Arguments as to the outcome of the Conflict situation they are in, and the strength of the Arguments is decided upon by the Umpire. I usually allow the player with an advantage to choose who shoud go first (no Conflict situations are every really equal - but if you felt they were, you could make the players write their Arguments down in secret).
+
+They then both roll the dice, together, to see who succeeds. In a Conflict situation, one side must succeed and one side must fail. If both succeed, or both fail, they must both roll again, and again, until one succeeds and the other fails.
+
+For Example:
+
+So if one player makes an argument that he is attacking the town with his troops, and the other player makes and argument that he is improving the defences, the arguments are judged normally. If the attack Argument fails, the attack does not take place at that time, and there is no conflict.
+
+If the attack Argument succeeds, a Conflict situation will be inevitable, but if the defender's Argument about improving the defences succeeds, he might have an advantage in the ensuing battle. Let's say that his Argument does not succeed because the Umpire judged that he really didn't have sufficient time to get the work done, made the Argument Weak, and it failed.
+
+The attacking player elects to go first and argues that he captures the town. The other player argues that he is repulsed with heavy losses. They then both dice to see who wins, with the likelyhood that the defender will have to roll higher, because the towns defences were not what they could have been.
+
+
+Comments on Resolving Conflicts
+
+This may seem a little arbitrary and all dependent on a good Umpire (what games doesn't?) but, in practice, it works very well. When a player makes a particularly good argument it is obvious, normally from the rueful grins and grudging nods of the opposition, that he will have a good chance of succeeding.
+
+-----------------------------------------------------------
+
+Playing Tips
+
+Some players get caught in the Logical Inconsistancy trap by arguing directly against another player who has already had a successful argument. This puts them at a disadvantage because, not only has their argument got to succeed, but they then have to roll off against the other player. It is far better (and much more fun) to be a little more subtle. If he succeeds in arguing that he attacks you, you might argue that the attack does indeed take place, but was ill-timed and badly co-ordinated - which might place you in an advantage in the resulting battle.
+
+It helps the players to insist on an argument failing if you roll a 1 on a D6. Nothing is ever certain, and the player can look on it as not necessarily a total failure, but simply that it didn't happen AT THAT TIME. It might happen later, if they argue again.
+
+Conversely, you will need to veto stupid arguments. I simply say that I don't believe the argument is realistic - even having to roll a 6 on a D6 - and give them a chance to come up with something else.
+
+
+Secret Arguments.
+
+There will be some cases where you want to hide from the other players the thing you want to argue about. It could be that you have boobytrapped a piece of equipment you think your opponent will use, or that you have swapped the vital blueprints for a set of fake ones in case the safe is broken into. In this case you simply write down your argument on a piece of paper, and present it to the Umpire announcing to the other players that you are making a secret argument. The Umpire will make a judgment and you will roll the dice normally, but the other players have no idea what it is about.
+
+You should be careful, however, that the players don't make too many secret arguments. This can ruin the game's atmosphere and reduce the focus, so that the game drags on unnecessarily. They must only be permitted when they refer to quite specific things or events. An argument about gathering information from a spy, in most games, will be quite a generic argument and should be argued openly.
+
+You may want to limit the players to only a single secret argument per game.
+
+
+Big Projects.
+
+Depending on the level of the game, some actions and events represent such a large investment in time and effort that they require multiple arguments in order to bring them to fruition. In a Spy Game, recruiting a spy would take a number of arguments in order to make the spy do everything you want them to. You must make the initial contact, followed by persuasion to carry out a minor act (like stealing a copy of the Pentagon telephone directory), followed by more important spying actions (like photographing secret plans). It would be unreasonable to argue in a Spy Game that you recruit a girl from the typing pool to assassinate the head of the CIA in a single argument!
+
+The level of the game will determine what sort of arguments are Big Projects, so in a game about Wellington's action in the Peninsular War a single argument about fortifying a town would be perfectly reasonable. In a game about individual Refugees in Bosnia, building a house might take several successful arguments. A Matrix Game can easily be at the Strategic level involving the actions of Governments and Countries; or equally at the Individual level involving the actions of you and your close friends.
+
+As a rule of thumb, a Big Project should take no more than 3 successful arguments, otherwise the game is dominated too much by a single event. You should also remember the principal that once an argument has started an ongoing action, it will continue until another argument stops it.
+
+This means that the 3 stages in, for example, building a house could logically be:
+
+Acquiring the funds (Can I get a mortgage?).
+Starting to build the house (When will the right builder be available?).
+Completing the building of the house (Are they ever going to finish it?).
+
+
+Killing Arguments.
+
+It often arises in Matrix Games where one of the players argues that something happens to kill off one of the other player characters. This is, of course, permitted as you can argue about anything in a Matrix Game, and it will be assessed like any other argument. It may well be less likely to succeed as the player characters in the game are usually chosen from the survivors of a particular historical event, but it is not impossible - nor should it be.
+
+If a character is killed off in a game, however, it does not prevent the player from continuing to make arguments.
+
+
+Player Roles and the Level of the Game.
+
+When you are designing a Matrix Game it is worth thinking about the level at which the players roles will be operating in the game. In is usually better, and produces a more balanced game, when the level on which the player roles are operating are broadly similar. It would be difficult to get a balanced game if 3 of the players are playing Generals in command of vast Armies, and another player is playing a simple individual soldier.
+
+
+Levels of Protection and Hidden Things.
+
+At the start of a game there are certain things that are not readily accessible to some of the player characters. For example, in a Spy Game the secret plans for a new submarine would be heavily protected. Equally, in an X-Files game, the location of the secret government base would be carefully concealed.
+
+Things that are hidden or secret require a successful argument merely to find them. Things that are protected will require successful arguments to overcome the different levels of protection. In an X-Files game, the secret government base may declared by the Umpire to have 3 levels of protection: Its hidden location, its boundary fence, and the security guards, all of which must be overcome by successful arguments before the base can be penetrated.
+
+
+Having Battles and Fighting.
+
+Many players feel uneasy about the concept of the result of a single argument (and dice roll) deciding the outcome of a battle or a fight. This is natural, but they should remember that the Matrix Game is about the entire campaign and it is the results of many battles or fights, rather than a single one, that is important.
+
+It is up to the umpire to decide exactly what the outcome of the battle or fight was. He will make a judgement, depending on the strength of the arguments and the difference in the score on the two dice rolls, as to how heavy was the defeat or just how narrow was the margin of victory. If the outcome was very close, the loser may have an opportunity to withdraw in his next turn with most of his forces intact.
+
+
+Unifying Purpose.
+
+It is absolutely essential in a Matrix Game, as in any game, that there is a unifying purpose to the game, and that the players understand it. What is the game all about?
+
+It could be expressed as "a Spy Game, set in pre-war London, about the efforts of Secret Agents to steal the Secret Plans for a new war-winning weapon". Alternatively, it could be "a Napoleonic Game, about Wellington's Campaign in the Spanish Peninsular"; or "an X-Files Game, set in modern America, about a crashed Alien Spacecraft". The unifying purpose lets the players get an immediate handle on the game and what it is going to be about. It also gives them some guidance so that they don't get too far "off subject".
+
+
+Ending the Game.
+
+Sometimes you run out of time and have to finish the game with matters still unresolved. One good way of finishing the game is to have the players each make an argument as to how they think the game turns out.
+
+The "What happens" bit can be as long as you like, but it is still supported by only 3 reasons why or how. The Umpire then assigns the chance of success in the normal way - but nobody rolls the dice until everyone has made their argument. Each player now has a chance of succeeding and they all roll together. Each failure is "knocked out" and another round of dice rolling takes place until only one player is left. At each stage if everyone fails, the dice are rolled again, but only those left in at that stage get to roll, not those "knocked out" in a previous round.

@@ -1,0 +1,60 @@
+S.C.R.U.D.
+Simple Combat Resolution Using Dice
+by Timothy McCoy Price
+
+These rules are intended to be used as a simple method of resolving the combats that take place within the larger framework of a game. They are meant for those battles that take place in the boarding actions of Naval Games, the Open Battles that are encountered while playing Matrix Games, and the confrontations that appear during back-to-back Map Games. In short, those small, but vital, elements that are part of the whole that makes up a Wargame, that have to be resolved quickly or the Game itself grinds to a halt.
+
+The Basic Rule.   The basic rule is as follows: 1 x 6-Sided Dice = 1 x Combat Unit
+The size of that Combat Unit will, of course, vary from game to game. In the boarding action it may be as little as 5-10 men; in a Map Game, it could be as much as an entire Brigade, or even a Corps.
+
+The Method.   The dice on the opposing sides are rolled as follows: Roll the Dice. Line them up, Highest vs Highest
+If one side has more dice than the other, any dice that are extra, and score less than the lowest dice of the side with the fewer dice, are ignored.
+
+The Result.   Each dice represents a Combat Unit, and the scores on the dice represent how well they did in that particular engagement. Compare the two dice that are paired off: The higher dice beats the lower dice
+Equal scores are ignored. Each dice defeated represents a push-back in large combats, or a death in smaller combats. For every three defeats, eliminate one of the opponents Combat Units (the lowest value one or, if they have the same value, the lowest scoring one).
+
+Variations.   The strength in this system is in the number of variations you can build into a very simple mechanism. Each defeat could be translated into a -1 on the next time the dice is thrown. When you exceed -2, the unit is eliminated. Matrix Arguments could be used to add +1 or -1 to the value of a specific dice used. The usual modifiers for: Troop Quality, Fortified Positions, State of Supply, etc; can all be factored in with simple + or - modifiers.
+
+You could even take supply and fatigue into account by saying that each "6" scored indicates particularly heavy fighting. The Combat Unit involved fights with a -1 on the dice until resupplied or rested.
+
+You may decide that, despite any + or - factors, a "6" is the maximum any unit can score. This will allow you to keep score more easily, as you can turn the dice over after throwing them, to reflect the modifiers used, without having to use a piece of paper. It also means that two Elite units, perhaps with +3 modifiers, are likely to have inconclusive combats (the same dice score) when fighting each other, at least 50% of the time.
+
+Reserves could be taken into account by adding one "pip" from the value of dice thrown "in reserve" to the value of the first few dice thrown "in the front line". The results can also be easily be translated into battle reports to pass back to the players, as each dice represents a specific unit. Thus, its fortunes can be plotted from battle to battle.
+
+S.C.R.U.D.
+Examples of Combat
+
+As an example we will take part of the battle of Tannenburg during the First World War. The German 20th Corps, under Scholtz, is attacked by elements of the Russian 2nd Army, under Samsonov. The Germans have 4 brigades, the Russians 8. The Russians are poorly trained and equipped and exhausted after advancing for days over sandy soil. Each Russian Unit = -1. The Germans are very well trained, but are not in a defensive position. Each German Unit +1. The battle is as follows:
+
+Initial Dice Throw:		RUSSIAN:	2 5 5 3 3 1 3 3
+						GERMAN:		3 5 3 3
+Lined Up and Modified:	RUSSIAN:	4 4 2 2 2 2 1 1
+						GERMAN:		6 4 4 4
+Result of First Day:	lose:		4   2 2
+						RUSSIAN:	  4    		
+						GERMAN:		6 4 4 4
+						lose:
+
+The Russians are pushed back with one Brigade Destroyed, and 2 Brigades are now fighting with a -2. One of the German units has expended a lot of ammunition, so loses its +1 advantage. (These units are represented by bold numbers). The Russians order an attack the very next day.
+
+Initial Dice Throw:		RUSSIAN:	6 1 1 2 6 4 5
+						GERMAN:		6 2 3 2
+Lined Up and Modified:	RUSSIAN:	5 4 4 3 1 1 1
+						GERMAN:		6 4 3 3
+Result of Second Day:	lose:		5
+						RUSSIAN:	  4 4 3
+						GERMAN:		6 4   3
+						lose:		    3
+
+The Russians succeed in pushing back one of the German units and forcing and already depleted unit to use up ammunition, (but are pushed back themselves and 2 units use a lot of ammo (one of which becomes combat ineffective on -3)). Overall, as the success is matched by failure, the line itself holds. The Russians attack again, the next day:
+
+Initial Dice Throw:		RUSSIAN:	6 5 5 4 2 4
+						GERMAN:		1 2 4 4
+Lined Up and Modified:	RUSSIAN:	5 4 3 3 2 1		(two of the Russians = -2)
+						GERMAN:		4 3 3 2			(one of the Germans = -1)
+Result of Third Day;	lose:						(one of the Germans = +0)
+						RUSSIAN:	5 4 3 3
+						GERMAN:	    	3
+						lose:		4 3   2
+
+The Russians, throwing their freshest units into the front line, finally overwhelm the German defenders, who lose a Brigade (the depleted one). Had the German time to have fortified their position, the outcome could have been very different. In the game, the combat resolution took less time to work out, than it did for you to read this page...
