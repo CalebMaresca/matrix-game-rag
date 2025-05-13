@@ -1,3 +1,14 @@
+---
+title: Matrix Wargame RAG Agent
+emoji: 🏃
+colorFrom: pink
+colorTo: gray
+sdk: docker
+pinned: false
+license: agpl-3.0
+short_description: Agentic RAG for designing/asking q abt matrix games
+---
+
 # Matrix Wargame RAG Agent - Certification Challenge
 
 This repository contains the work for the Certification Challenge, focusing on an application to assist with understanding and designing matrix wargames.
@@ -106,6 +117,6 @@ See `embeddings_fine_tune.ipynb`
 ## Links
 
 *   **Loom Video (Demo & Use Case - 5 mins MAX):** [Link to Loom video]
-*   **Written Document:** This README.md file serves as the written document.
 *   **Public Application Link:** [Link to final Hugging Face Space or other deployment]
 *   **Public Fine-Tuned Embedding Model Link:** [Link to Hugging Face Hub model]
+
