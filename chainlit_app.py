@@ -47,8 +47,7 @@ async def start_chat():
     # Initialize Langchain components
     model = ChatOpenAI(
         model=settings["model"],
-        temperature=settings["temperature"],
-        # max_tokens=settings["max_tokens"] # ChatOpenAI might not take max_tokens directly here
+        temperature=settings["temperature"]
     )
     
     def tiktoken_len(text):
@@ -68,15 +67,12 @@ async def start_chat():
 
     split_chunks = text_splitter.split_documents(docs)
     embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
-    # Create a dummy collection. You'll need to populate this with actual documents for RAG to work.
     vector_store = QdrantVectorStore.from_documents(
         split_chunks,
         embedding_function,
         location=":memory:",
         collection_name="matrix_game_docs",
     )
-    # You might want to add some documents here if you have any, e.g.:
-    # vector_store.add_texts(["Some initial context for the agent"])
 
     # Initialize Wikipedia toolkit
     wikipedia_toolkit = WikipediaToolkit()
