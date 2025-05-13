@@ -116,7 +116,7 @@ See `embeddings_fine_tune.ipynb`
 
 ## Links
 
-*   **Loom Video (Demo & Use Case - 5 mins MAX):** [Link to Loom video]
+*   **Loom Video (Demo & Use Case):** https://www.loom.com/share/97d13a5bd10844efa314919451cfc6f5?sid=570a415b-1c35-4cc1-bb02-c13ecc03fbe5
 *   **Public Application Link:** https://huggingface.co/spaces/CalebMaresca/matrix-game-rag
 *   **Public Fine-Tuned Embedding Model Link:** https://huggingface.co/CalebMaresca/matrix-game-embeddings-ft-v1
 
