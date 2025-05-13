@@ -112,6 +112,7 @@ async def main(message: cl.Message):
                     {'messages': chat_history},
                     stream_mode="messages"
                 ):
+                    print(f'yielded token {toke}')
                     if metadata['langgraph_node'] == 'agent':
                         await msg.stream_token(token.content)
     except Exception as e:
