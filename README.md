@@ -94,7 +94,7 @@ See `ragas_create_testset.ipynb`
 See `embeddings_fine_tune.ipynb`
 
 **Deliverables:**
-*   Link to fine-tuned embedding model on Hugging Face Hub: [Link to model]
+*   Link to fine-tuned embedding model on Hugging Face Hub: https://huggingface.co/CalebMaresca/matrix-game-embeddings-ft-v1
 
 ## Task 7: Assessing Performance
 
@@ -117,6 +117,6 @@ See `embeddings_fine_tune.ipynb`
 ## Links
 
 *   **Loom Video (Demo & Use Case - 5 mins MAX):** [Link to Loom video]
-*   **Public Application Link:** [Link to final Hugging Face Space or other deployment]
-*   **Public Fine-Tuned Embedding Model Link:** [Link to Hugging Face Hub model]
+*   **Public Application Link:** https://huggingface.co/spaces/CalebMaresca/matrix-game-rag
+*   **Public Fine-Tuned Embedding Model Link:** https://huggingface.co/CalebMaresca/matrix-game-embeddings-ft-v1
 
