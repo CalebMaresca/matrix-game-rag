@@ -106,13 +106,17 @@ async def main(message: cl.Message):
     msg = cl.Message(content="")
     # msg.content will be built by streaming tokens.
     # stream_token will call send() on the first token.
-    async for token, metadata in agent_graph.astream(
-                {'messages': chat_history},
-                stream_mode="messages"
-            ):
-                
-                if metadata['langgraph_node'] == 'agent':
-                    await msg.stream_token(token.content)
+    try:
+        print(f"Entering agent_graph.astream loop for message: '{message.content}'")
+        async for token, metadata in agent_graph.astream(
+                    {'messages': chat_history},
+                    stream_mode="messages"
+                ):
+                    if metadata['langgraph_node'] == 'agent':
+                        await msg.stream_token(token.content)
+    except Exception as e:
+        # THIS WILL CAPTURE THE ERROR IN YOUR APPLICATION
+        print(f"ERROR during agent_graph.astream for message '{message.content}': {type(e).__name__} - {e}")
                     
     if msg.streaming:
         await msg.update()
