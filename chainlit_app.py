@@ -1,7 +1,8 @@
 import chainlit as cl
 from datetime import datetime
 
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from rag import create_vector_search_tool
 from game_designer_tool import GameDesignerTool
@@ -72,7 +73,7 @@ docs.extend(loader.load())
 docs = loader.load()
 
 split_chunks = text_splitter.split_documents(docs)
-embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
+embedding_function = HuggingFaceEmbeddings(model="CalebMaresca/matrix-game-embeddings-ft-v1")
 vector_store = QdrantVectorStore.from_documents(
     split_chunks,
     embedding_function,

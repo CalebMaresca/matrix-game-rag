@@ -4,6 +4,7 @@ langchain
 langchain-openai
 langchain-qdrant
 langchain-community
+langchain-huggingface
 qdrant-client
 tiktoken
 PyMuPDF
