@@ -105,6 +105,7 @@ async def main(message: cl.Message):
     chat_history = cl.chat_context.to_openai()
     
     msg = cl.Message(content="")
+    await msg.send()
     # msg.content will be built by streaming tokens.
     # stream_token will call send() on the first token.
     try:
