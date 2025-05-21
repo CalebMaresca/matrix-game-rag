@@ -16,6 +16,7 @@ from wikipedia_tool import WikipediaToolkit
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.prompts import MessagesPlaceholder
 from dotenv import load_dotenv
+import asyncio
 
 load_dotenv()
 
@@ -70,8 +71,6 @@ docs.extend(loader.load())
 loader = DirectoryLoader("rag-data/", glob="*.txt")
 docs.extend(loader.load())
 
-docs = loader.load()
-
 split_chunks = text_splitter.split_documents(docs)
 embedding_function = HuggingFaceEmbeddings(model="CalebMaresca/matrix-game-embeddings-ft-v1")
 vector_store = QdrantVectorStore.from_documents(
@@ -110,13 +109,25 @@ async def main(message: cl.Message):
     # stream_token will call send() on the first token.
     try:
         print(f"Entering agent_graph.astream loop for message: '{message.content}'")
-        async for token, metadata in agent_graph.astream(
+        # Assuming agent_graph.astream yields (chunk, metadata_dict)
+        async for token_chunk, metadata in agent_graph.astream(
                     {'messages': chat_history},
-                    stream_mode="messages"
+                    stream_mode="messages" # This mode should yield AIMessageChunk for create_react_agent
                 ):
-                    print(f'yielded token {token}')
-                    if metadata['langgraph_node'] == 'agent':
-                        await msg.stream_token(token.content)
+            # More detailed print for debugging what astream yields
+            chunk_content_for_log = getattr(token_chunk, 'content', 'N/A (no content attr)')
+            metadata_keys_for_log = list(metadata.keys()) if isinstance(metadata, dict) else 'N/A (metadata not a dict)'
+            print(f"Yielded from astream: chunk_content='{chunk_content_for_log}', metadata_keys='{metadata_keys_for_log}'")
+            
+            # Check if 'langgraph_node' is in metadata (and metadata is a dict) and equals 'agent'
+            # Also ensure token_chunk has a 'content' attribute and it's not empty
+            if isinstance(metadata, dict) and metadata.get('langgraph_node') == 'agent' and \
+               hasattr(token_chunk, 'content') and token_chunk.content:
+                await msg.stream_token(token_chunk.content)
+            
+            # Yield control to the event loop.
+            # This can help ensure other tasks (like WebSocket sending) get a chance to run.
+            await asyncio.sleep(0)
     except Exception as e:
         # THIS WILL CAPTURE THE ERROR IN YOUR APPLICATION
         print(f"ERROR during agent_graph.astream for message '{message.content}': {type(e).__name__} - {e}")
